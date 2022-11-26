@@ -4,6 +4,9 @@ const router = require('express').Router();
 // Require fs, File System, functionality to be able to access the db.json file and adjust it based on coding
 const fs = require('fs');
 
+// Require the uuid functionality, which builds a unique user id we can add to the note
+const uuid = require('../helpers/uuid');
+
 // Hanlde Get of existing notes, to populate on page
 router.get('/notes', function(req, res) {
     fs.readFile('./db/db.json', (err, data) => {
@@ -21,10 +24,8 @@ router.post('/notes', function(req, res) {
       if (err) throw err;
       dbData = JSON.parse(data);
       dbData.push(userNotes);
-      let number = 1;
       dbData.forEach((note, index) => {
-        note.id = number;
-        number++;
+        note.id = uuid();
         return dbData;
       });
       console.log(dbData);
@@ -41,18 +42,18 @@ router.post('/notes', function(req, res) {
 
 // Handle the Delete HTTP request of a note, based on ID, from user clicking the delete icon
 router.delete('/notes/:id', function(req, res) {
-    // Grab the ID of the note user wants to remove
+    // Get the ID of the note user wants to remove
     const deleteNote = req.params.id;
     console.log(`Delete note ID: ${deleteNote}`);
 
     fs.readFile('./db/db.json', (err, data) => {
       if (err) throw err;
 
-      // Copmpare ID or deleted note to notes in the db.json file
+      // Copmpare ID of deleted note to notes in the db.json file
       dbData = JSON.parse(data);
       // Go through notes, to match and then splice the one selected for deletion
       for (let i = 0; i < dbData.length; i++) {
-        if (dbData[i].id === Number(deleteNote)) {
+        if (dbData[i].id === deleteNote) {
           dbData.splice([i], 1);
         }
       }
@@ -63,7 +64,7 @@ router.delete('/notes/:id', function(req, res) {
         if (err) throw err;
       });
     });
-    // Express response.status(204)
+    // Express send response, but with no need to navigate, 204 No Content
     res.status(204).send();
   });
 

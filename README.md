@@ -1,4 +1,4 @@
-# Challenge 10 Object Oriented Programming Challenge: Team Profile Generator
+# Challenge 11 Object Oriented Programming Challenge: Team Profile Generator
 
 ## Badges
 [![License: CC0-1.0](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
