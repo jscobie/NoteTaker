@@ -2,7 +2,7 @@
 const express = require('express');
 
 // Set value for port, both for local (3001) and process.env.port (use for Heroku)
-const PORT = process.env.port || 3001;
+const PORT = process.env.PORT || 3001;
 
 // Require path functions
 const path = require('path');
