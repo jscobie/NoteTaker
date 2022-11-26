@@ -1,9 +1,10 @@
+// Set Router to be a router for express.js
 const router = require('express').Router();
 
+// Require fs, File System, functionality to be able to access the db.json file and adjust it based on coding
 const fs = require('fs');
 
-// requesting the existing notes
-
+// Hanlde Get of existing notes, to populate on page
 router.get('/notes', function(req, res) {
     fs.readFile('./db/db.json', (err, data) => {
       if (err) throw err;
@@ -12,8 +13,7 @@ router.get('/notes', function(req, res) {
     });
   });
 
-// posting note function route 
-
+// Handle the Post of new notes when user clicks save
 router.post('/notes', function(req, res) {
     const userNotes = req.body;
 
@@ -39,19 +39,18 @@ router.post('/notes', function(req, res) {
   });
 
 
-// delete note function route
-
+// Handle the Delete HTTP request of a note, based on ID, from user clicking the delete icon
 router.delete('/notes/:id', function(req, res) {
-    // Gets id number of note to delete
+    // Grab the ID of the note user wants to remove
     const deleteNote = req.params.id;
-    console.log(deleteNote);
+    console.log(`Delete note ID: ${deleteNote}`);
 
     fs.readFile('./db/db.json', (err, data) => {
       if (err) throw err;
 
-      // Comparing each note's id to delete note
+      // Copmpare ID or deleted note to notes in the db.json file
       dbData = JSON.parse(data);
-      // for each function, comparing each note's id to the chosen_for_death variable
+      // Go through notes, to match and then splice the one selected for deletion
       for (let i = 0; i < dbData.length; i++) {
         if (dbData[i].id === Number(deleteNote)) {
           dbData.splice([i], 1);

@@ -1,5 +1,3 @@
-// add the html static page routes here
-
 // Require Path funcitonality
 const path = require('path');
 
@@ -16,4 +14,5 @@ router.get('*', (req, res) =>
   res.sendFile(path.join(__dirname, '../public/index.html'))
 );
 
+// Export results
 module.exports = router;
