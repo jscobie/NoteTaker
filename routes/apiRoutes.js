@@ -5,7 +5,7 @@ const fs = require('fs');
 // requesting the existing notes
 
 router.get('/notes', function(req, res) {
-    fs.readFile('../db/db.json', (err, data) => {
+    fs.readFile('./db/db.json', (err, data) => {
       if (err) throw err;
       dbData = JSON.parse(data);
       res.send(dbData);
@@ -17,7 +17,7 @@ router.get('/notes', function(req, res) {
 router.post('/notes', function(req, res) {
     const userNotes = req.body;
 
-    fs.readFile('../db/db.json', (err, data) => {
+    fs.readFile('./db/db.json', (err, data) => {
       if (err) throw err;
       dbData = JSON.parse(data);
       dbData.push(userNotes);
@@ -31,7 +31,7 @@ router.post('/notes', function(req, res) {
 
       stringData = JSON.stringify(dbData);
 
-      fs.writeFile('../db/db.json', stringData, (err, data) => {
+      fs.writeFile('./db/db.json', stringData, (err, data) => {
         if (err) throw err;
       });
     });
@@ -41,12 +41,12 @@ router.post('/notes', function(req, res) {
 
 // delete note function route
 
-router.delete('/api/notes/:id', function(req, res) {
+router.delete('/notes/:id', function(req, res) {
     // Gets id number of note to delete
     const deleteNote = req.params.id;
     console.log(deleteNote);
 
-    fs.readFile('../db/db.json', (err, data) => {
+    fs.readFile('./db/db.json', (err, data) => {
       if (err) throw err;
 
       // Comparing each note's id to delete note
@@ -60,7 +60,7 @@ router.delete('/api/notes/:id', function(req, res) {
       console.log(dbData);
       stringData = JSON.stringify(dbData);
 
-      fs.writeFile('../db/db.json', stringData, (err, data) => {
+      fs.writeFile('./db/db.json', stringData, (err, data) => {
         if (err) throw err;
       });
     });
