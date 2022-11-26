@@ -1,20 +1,20 @@
-# Challenge 11 Object Oriented Programming Challenge: Team Profile Generator
+# Challenge 11 Express.js: Note Taker
 
 ## Badges
 [![License: CC0-1.0](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 ## Description
 
-This project was built to allow me to showcase Module 10's topics of Object Oriented Programming and Test Driven Development. I was tasked with building a node.js based application that uses Inquirer to ask the user questions for inputs and then have those inputs be used to build a Team Profile site of their team's structure.
+This challenge is being used to showcase the training in Module 11 for Express.js, building server files and servers. We were given sample code that needed additional code to make this function as a working Note Taking site.
 
-I also used Jest as a method to complete testing and use the TDD process of building code through a testing method. 
+The mandatory files needed yet missing for this project to return a working Note Taker site are server.js, and route files, which I named htmlRoutes.js and apiRoutes.js. These then needed to be completed to allow the post, get, and for a bonus a delete HTTP request to work.
 
-[Github Repository Link](https://github.com/jscobie/TeamProfileGenerator)<br>
-[Deployed page Link](https://jscobie.github.io/TeamProfileGenerator/)<br>
-[Video demonstration of the test, user questions, and index.html creation](https://drive.google.com/file/d/1OEiRnB_qNIyO3_RGcyBAvGMf5J0Fafo9/view)
+[Github Repository Link](https://github.com/jscobie/NoteTaker)<br>
+[Heroku URL of the functional, deployed application](https://jscobie.github.io/NoteTaker/)<br>
+[Git Hub Deployed page Link (not functioning just repository site)](https://jscobie.github.io/NoteTaker/)
 
 Screenshot of application created HTML page:<br>
-![HTML webpage created during video demonstration](./assets/mod10ScreenCapture.PNG)
+![HTML webpage created during video demonstration](./assets/mod11QuickEvaluate.gif)
 
 ## Table of Contents
 
@@ -30,10 +30,10 @@ Screenshot of application created HTML page:<br>
 
 Clone to your computer using SSH from GitHub:
 ```
-git clone git@github.com:jscobie/TeamProfileGenerator.git
+git clone git@github.com:jscobie/NoteTaker.git
 ```
 
-You'll also need to run to install the node required dependencies after you clone the install:
+You'll also need to run to install the node required dependencies after you clone the install by running:
 ```
 npm install
 ```
@@ -47,9 +47,9 @@ Read more about [MIT license](https://opensource.org/licenses/MIT).
 
 ## Tests
 
-To run the Jest tests:
+Review Note Taker site is working once installed. To run Note Taker site after installation run the following command: 
 ```
-npm test
+npm start
 ```
 
 ## Credits
@@ -57,8 +57,7 @@ npm test
 Credit to the MSU Bootcamp and instructors for training and training materials to resolve some of these issues.<br>
 *Programs, packages used:*<br>
 [Node.js](https://nodejs.org/en/)<br>
-[Inquirer](https://www.npmjs.com/package/inquirer)<br>
-[Jest](https://www.npmjs.com/package/jest)
+[Express.js](https://expressjs.com/)<br>
 
 ## Questions:
 *Use the following options to contact me for questions:*<br>
