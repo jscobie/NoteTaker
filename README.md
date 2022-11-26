@@ -10,7 +10,7 @@ This challenge is being used to showcase the training in Module 11 for Express.j
 The mandatory files needed yet missing for this project to return a working Note Taker site are server.js, and route files, which I named htmlRoutes.js and apiRoutes.js. These then needed to be completed to allow the post, get, and for a bonus a delete HTTP request to work.
 
 [Github Repository Link](https://github.com/jscobie/NoteTaker)<br>
-[Heroku URL of the functional, deployed application](https://jscobie.github.io/NoteTaker/)<br>
+[Heroku URL of the functional, deployed application](https://immense-everglades-35861.herokuapp.com/)<br>
 [Git Hub Deployed page Link (not functioning just repository site)](https://jscobie.github.io/NoteTaker/)
 
 Screenshot of application created HTML page:<br>
