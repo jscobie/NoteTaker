@@ -7,10 +7,6 @@ const PORT = process.env.port || 3001;
 // Require path functions
 const path = require('path');
 
-// Require the 2 routes for api and html root
-const apiRoutes = require('./routes/apiRoutes');
-const htmlRoutes = require('./routes/htmlRoutes');
-
 // Set app variable to express.js
 const app = express();
 
@@ -22,6 +18,10 @@ app.use(express.urlencoded({ extended: true }));
 
 // Middleware for using html public directory
 app.use(express.static('public'));
+
+// Require the 2 routes for api and html root
+const apiRoutes = require('./routes/apiRoutes');
+const htmlRoutes = require('./routes/htmlRoutes');
 
 // Middle ware to use routes for /api and / (root)
 app.use('/api', apiRoutes);
