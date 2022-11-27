@@ -11,10 +11,10 @@ The mandatory files needed yet missing for this project to return a working Note
 
 [Github Repository Link](https://github.com/jscobie/NoteTaker)<br>
 [Heroku URL of the functional, deployed application](https://immense-everglades-35861.herokuapp.com/)<br>
-[Git Hub Deployed page Link (not functioning just repository site)](https://jscobie.github.io/NoteTaker/)
+[Git Hub Deployed page link (not functioning just repository site hosting readme file)](https://jscobie.github.io/NoteTaker/)
 
-Screenshot of application created HTML page:<br>
-![HTML webpage created during video demonstration](./assets/mod11QuickEvaluate.gif)
+Animation of the working /notes page adding and deleting a note:<br>
+![HTML demonstration of adding a note and deleting one, site work](./assets/mod11QuickEvaluate.gif)
 
 ## Table of Contents
 
